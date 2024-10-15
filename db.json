@@ -1,0 +1,49 @@
+{
+  "students": [
+    {
+      "id": "1dc2d954-79f3-45cb-90ee-637e95de939f",
+      "name": "Chidera",
+      "registrationNumber": "1111",
+      "major": "Maths",
+      "dob": "2024-10-14",
+      "gpa": 2.1
+    },
+    {
+      "id": "2d8abd98-16d8-472e-8e6c-bd0a04d860ec",
+      "name": "name ",
+      "registrationNumber": "1221",
+      "major": "maths",
+      "dob": "2024-10-01",
+      "gpa": 3.34
+    },
+    {
+      "id": "d6985c79-7504-46e7-a362-7ebcc715c458",
+      "name": "chidera Anele",
+      "registrationNumber": "123",
+      "major": "maths",
+      "dob": "2024-10-03",
+      "gpa": 0
+    },
+    {
+      "students": [
+        {
+          "id": "1",
+          "name": "John Doe",
+          "registrationNumber": "REG001",
+          "major": "Computer Science",
+          "dob": "2000-01-01",
+          "gpa": 3.5
+        },
+        {
+          "id": "2",
+          "name": "Jane Smith",
+          "registrationNumber": "REG002",
+          "major": "Mathematics",
+          "dob": "1999-02-02",
+          "gpa": 3.8
+        }
+      ]
+    }
+    
+  ]
+}
