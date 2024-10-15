@@ -25,25 +25,20 @@
       "gpa": 0
     },
     {
-      "students": [
-        {
-          "id": "1",
-          "name": "John Doe",
-          "registrationNumber": "REG001",
-          "major": "Computer Science",
-          "dob": "2000-01-01",
-          "gpa": 3.5
-        },
-        {
-          "id": "2",
-          "name": "Jane Smith",
-          "registrationNumber": "REG002",
-          "major": "Mathematics",
-          "dob": "1999-02-02",
-          "gpa": 3.8
-        }
-      ]
+      "id": "1",
+      "name": "John Doe",
+      "registrationNumber": "REG001",
+      "major": "Computer Science",
+      "dob": "2000-01-01",
+      "gpa": 3.5
+    },
+    {
+      "id": "2",
+      "name": "Jane Smith",
+      "registrationNumber": "REG002",
+      "major": "Mathematics",
+      "dob": "1999-02-02",
+      "gpa": 3.8
     }
-    
   ]
 }
