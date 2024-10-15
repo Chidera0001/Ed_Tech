@@ -4,7 +4,6 @@ import Layout from '@/components/Layout';
 import SearchBar from '@/components/SearchBar';
 import Link from 'next/link';
 
-
 interface Student {
   id: string;
   name: string;
@@ -61,8 +60,7 @@ const HomePage: React.FC = () => {
         <h1 className="text-4xl font-extrabold text-center mb-8 text-green-600">
           Student Management Dashboard
         </h1>
-
-        <div className="flex justify-between items-center mb-6">
+        <div className="flex flex-wrap justify-between items-center mb-6">
           <SearchBar
             searchTerm={searchTerm}
             onSearch={handleSearch}
@@ -76,24 +74,23 @@ const HomePage: React.FC = () => {
             Add Student
           </button>
         </div>
-
-        <div className="overflow-hidden rounded-lg shadow-lg">
+        <div className="overflow-auto rounded-lg shadow-lg">
           <table className="min-w-full bg-white">
             <thead className="bg-green-600">
               <tr>
-                <th className="px-6 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider">
+                <th className="px-2 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider">
                   Name
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider">
+                <th className="px-2 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider">
                   Registration Number
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider">
+                <th className="px-2 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider">
                   Major
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider">
+                <th className="px-2 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider">
                   GPA
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider">
+                <th className="px-2 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider">
                   Actions
                 </th>
               </tr>
@@ -101,26 +98,29 @@ const HomePage: React.FC = () => {
             <tbody className="divide-y divide-gray-200">
               {filteredStudents.map((student) => (
                 <tr key={student.id} className="hover:bg-gray-50">
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                  <td className="px-2 py-4 text-sm font-medium text-gray-900">
                     {student.name}
+                    <div className="text-xs text-gray-500">Reg: {student.registrationNumber}</div>
+                    <div className="text-xs text-gray-500">Major: {student.major}</div>
+                    <div className="text-xs text-gray-500">GPA: {student.gpa}</div>
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                  <td className="px-2 py-4 text-sm text-gray-500">
                     {student.registrationNumber}
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                  <td className="px-2 py-4 text-sm text-gray-500">
                     {student.major}
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                  <td className="px-2 py-4 text-sm text-gray-500">
                     {student.gpa}
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap space-x-2">
+                  <td className="px-2 py-4 space-x-2 space-y-2 text-sm font-medium">
                     <Link href={`/students/${student.id}/edit`}>
-                      <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-1 px-3 rounded text-sm">
+                      <button className="w-full sm:w-auto bg-blue-500 hover:bg-blue-600 text-white font-bold py-1 px-3 rounded text-sm">
                         Edit
                       </button>
                     </Link>
                     <button
-                      className="bg-red-500 hover:bg-red-600 text-white font-bold py-1 px-3 rounded text-sm"
+                      className="w-full sm:w-auto bg-red-500 hover:bg-red-600 text-white font-bold py-1 px-3 rounded text-sm"
                       onClick={() => handleDeleteStudent(student.id)}
                     >
                       Delete
